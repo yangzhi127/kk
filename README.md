@@ -1,6 +1,6 @@
 # AWS-Key-Hunter
 
-AWS Key Hunter is a powerful and automated tool that scans GitHub repositories for exposed AWS keys. It continuously monitors commits, detects AWS secrets in both base64 and plaintext formats, and alerts users about potential security risks om Discord.
+AWS Key Hunter is a powerful and automated tool that scans GitHub repositories for exposed AWS keys. It continuously monitors commits, detects AWS secrets in both base64 and plaintext formats, and alerts users about potential security risks on Discord.
 
 ## Features 🚀
 
@@ -8,8 +8,11 @@ AWS Key Hunter is a powerful and automated tool that scans GitHub repositories f
 - AWS Key Detection: Identifies AWS keys in both plaintext and base64-encoded formats.
 - Automated Scanning: Runs periodic searches for exposed AWS credentials.
 - Efficient & Secure: Optimized for minimal resource usage and packaged in a secure Docker container.
+- Discord integration to get alerts for any valid findings. 
 
 ## Installation 📥
+
+Create a `.env` file and add your **Github** token and your **Discord** Server's web hook in the file. 
 
 ### Using Docker
 
