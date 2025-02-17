@@ -32,6 +32,13 @@ Running Locally
 go run main.go
 ```
 
+## Disclaimer
+
+This tool was created for educational and experimental purposes only. They are not intended to be used for malicious activities or to harm others in any way. I do not endorse or encourage the use of this tool or information for illegal, unethical, or harmful actions.
+
+By using this tool or reading the article, you agree to accept full responsibility for any consequences that may arise from its use. I will not be held accountable for any damages, losses, or legal repercussions resulting from the misuse of this tool or the information provided.
+
+Use at your own risk.
 
 ## Contributing 🤝
 
