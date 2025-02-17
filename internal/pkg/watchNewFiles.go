@@ -12,6 +12,7 @@ import (
 	"os"
 	"regexp"
 	"strings"
+	"time"
 
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/credentials"
@@ -29,13 +30,16 @@ func WatchNewFilesatchNewFiles(githubToken string) {
 		log.Println("Watching for new file commits...")
 		query := "AKIA filename:.env OR filename:.ini OR filename:.yml OR filename:.yaml OR filename:.json sort:updated"
 		opt := &github.SearchOptions{Sort: "updated", Order: "desc"}
+
 		results, _, err := client.Search.Code(ctx, query, opt)
 		if err != nil {
 			log.Printf("Error searching for new files: %v", err)
 		}
+
 		for _, file := range results.CodeResults {
 			checkFileContent(ctx, client, &file)
 		}
+		time.Sleep(1 * time.Minute)
 	}
 }
 
