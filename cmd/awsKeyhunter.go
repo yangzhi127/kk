@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	"github.com/iamlucif3r/aws-key-hunter/internal/pkg"
 	"github.com/joho/godotenv"
@@ -37,6 +38,6 @@ func main() {
 	go pkg.WatchNewFilesatchNewFiles(githubToken)
 	for {
 		pkg.SearchGithub(githubToken)
-		// time.Sleep(1 * time.Minute)
+		time.Sleep(1 * time.Minute)
 	}
 }
