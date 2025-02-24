@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"github.com/iamlucif3r/aws-key-hunter/internal/pkg"
-	"github.com/joho/godotenv"
 )
 
 const (
@@ -17,12 +16,7 @@ const (
 	Reset  = "\033[0m"
 )
 
-func init() {
-	err := godotenv.Load(".env")
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-}
+
 func main() {
 	fmt.Println(Red + "┏┓┓ ┏┏┓  ┓┏┓      ┓┏     		" + Reset)
 	fmt.Println(Red + "┣┫┃┃┃┗┓━━┃┫ ┏┓┓┏━━┣┫┓┏┏┓╋┏┓┏┓	" + Reset)
